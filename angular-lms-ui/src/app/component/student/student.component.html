@@ -1,0 +1,27 @@
+<form (ngSubmit)="registerStudent()">
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [(ngModel)]="student.firstName" name="firstName" required>
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [(ngModel)]="student.lastName" name="lastName" required>
+  </div>
+  <div>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" [(ngModel)]="student.dob" name="dob" required>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" [(ngModel)]="student.address" name="address" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="student.email" name="email" required>
+  </div>
+  <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" [(ngModel)]="student.phoneNumber" name="phoneNumber" required>
+  </div>
+  <button type="submit">Register</button>
+</form>

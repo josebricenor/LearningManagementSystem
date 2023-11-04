@@ -1,0 +1,31 @@
+<form (ngSubmit)="createStudyLog()">
+  <div>
+    <label for="studentId">Student ID:</label>
+    <input type="number" id="studentId" [(ngModel)]="studyLog.studentId" name="studentId" required>
+  </div>
+  <div>
+    <label for="courseId">Course ID:</label>
+    <input type="number" id="courseId" [(ngModel)]="studyLog.courseId" name="courseId" required>
+  </div>
+  <div>
+    <label for="datetime-local">Date:</label>
+    <input type="date" id="datetime-local" [(ngModel)]="studyLog.date" name="date" required>
+  </div>
+  <div>
+    <label for="taskCategory">Task Category:</label>
+    <select id="taskCategory" [(ngModel)]="studyLog.taskCategory" name="taskCategory" required>
+      <option value="RESEARCHING">Researching</option>
+      <option value="PRACTICING">Practicing</option>
+      <option value="WATCHING_VIDEOS">Watching Videos</option>
+    </select>
+  </div>
+  <div>
+    <label for="taskDescription">Task Description:</label>
+    <input type="text" id="taskDescription" [(ngModel)]="studyLog.taskDescription" name="taskDescription" required>
+  </div>
+  <div>
+    <label for="timeSpent">Time Spent:</label>
+    <input type="number" step="1" id="timeSpent" [(ngModel)]="studyLog.timeSpent" name="timeSpent" required>
+  </div>
+  <button type="submit">Log Study Hours</button>
+</form>

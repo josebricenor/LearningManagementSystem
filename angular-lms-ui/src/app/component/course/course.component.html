@@ -1,0 +1,18 @@
+<div>
+  <h2>Create Course</h2>
+  <form (ngSubmit)="createCourse()">
+    <input type="text" [(ngModel)]="newCourse.name" name="name" placeholder="Course Name" required>
+    <input type="date" [(ngModel)]="newCourse.startDate" name="startDate" required>
+    <input type="date" [(ngModel)]="newCourse.endDate" name="endDate" required>
+    <button type="submit">Create Course</button>
+  </form>
+</div>
+
+<div>
+  <h2>Enroll Student in Course</h2>
+  <form (ngSubmit)="enrollStudent()">
+    <input type="number" [(ngModel)]="studentIdToEnroll" name="studentId" placeholder="Student ID" required>
+    <input type="number" [(ngModel)]="courseIdToEnroll" name="courseId" placeholder="Course ID" required>
+    <button type="submit">Enroll Student</button>
+  </form>
+</div>
